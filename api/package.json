@@ -1,0 +1,13 @@
+{
+  "name": "session-generator",
+  "version": "1.0.0",
+  "main": "api/pair.js",
+  "type": "module",
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.8",
+    "pino": "^8.21.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
