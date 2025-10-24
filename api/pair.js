@@ -29,12 +29,14 @@ export default async function handler(req, res) {
       res.status(200).json({
         pairingCode,
         message: 'Enter this pairing code in WhatsApp > Linked Devices > Link with phone number',
-        downloadUrl: `${req.headers.host}/api/download`
+        downloadUrl: `https://${req.headers.host}/api/download`
       })
     } else {
-      res.status(200).json({ message: 'Already paired. Visit /api/download to get your creds.' })
+      res.status(200).json({ 
+        message: 'Already paired. Visit /api/download to get your creds.' 
+      })
     }
   } catch (err) {
     res.status(500).send(`Error: ${err.message}`)
   }
-  }
+}
